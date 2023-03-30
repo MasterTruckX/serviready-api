@@ -14,7 +14,7 @@ class WaiterServices {
         ]
     }
 
-    create(newWaiter){
+    createProfile(newWaiter){
         return new Promise((resolve,reject) => {
             setTimeout(() => {
                 this.waiters.push(newWaiter);
