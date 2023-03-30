@@ -1,8 +1,10 @@
 const express = require('express');
 const app = express();
-// const port = precess.ENV.PORT || 3000;
-const port = 3000;
+const dotenv = require("dotenv")
 const routerApi = require('./routes/main.routes');
+
+dotenv.config();
+const port = process.env.PORT || 3000;
 
 app.use(express.json());
 app.listen(port, () => {
