@@ -1,0 +1,182 @@
+{
+	"info": {
+		"_postman_id": "f7656517-68ea-45dc-b600-5adb937e589e",
+		"name": "Waiters_API",
+		"description": "This collection contains the APIs to request the profile from all waiters at the same time or per each waiter, update profiles by specific properties or the whole profile at once, delete profiles and to create new profiles one by one.",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "queryAll",
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"method": "GET",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "localhost:3000/waiter",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"waiter"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "getById",
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"method": "GET",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "localhost:3000/waiter/1",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"waiter",
+						"1"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "createProfile",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"id\": 4,\r\n    \"name\": \"Manuel\",\r\n    \"lastName\": \"Castaneda\",\r\n    \"wage\": 15,\r\n    \"workDays\": [\"MON\",\"TUE\",\"WED\",\"THU\"]\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "localhost:3000/waiter",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"waiter"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "updatePartial",
+			"request": {
+				"method": "PATCH",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "[\"name\",\"Oscar\"]",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "localhost:3000/waiter/3",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"waiter",
+						"3"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "updateComplete",
+			"request": {
+				"method": "PUT",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"id\": 2,\r\n    \"name\": \"Natalie\",\r\n    \"lastName\": \"Muscarella\",\r\n    \"wage\": 13,\r\n    \"workDays\": [\"SAT\",\"SUN\",\"WED\",\"MON\"]\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "localhost:3000/waiter/2",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"waiter",
+						"2"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "deleteProfile",
+			"request": {
+				"method": "DELETE",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "localhost:3000/waiter/4",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"waiter",
+						"4"
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}
