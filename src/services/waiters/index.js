@@ -47,6 +47,10 @@ class WaiterServices {
                 const index = this.waiters.findIndex(waiter => waiter.id === parseInt(id));
                 var waiter = this.waiters[index];
                 waiter[property] = value;
+                // let newWaiter = { ...this.waiters[index] };
+                // newWaiter = { ...waiter, name: value };
+                // this.waiter[index] = newWaiter;
+                // Destructuring (...)
                 resolve();
             }, 1000);
         });

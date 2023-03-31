@@ -33,9 +33,11 @@ const create = async (req,res) => {
 const editPartial = async (req,res) => {
     try{
         const id = req.params.id;
-        const key = req.body[0];
+        const key = req.body[0]; 
         const value = req.body[1];
+        //const value = req.body.name;
         await waiterService.editPartial(id,key,value);
+        // await waiterService.editPartial(id,value);
         res.status(200).send();
     } catch(error){
         res.status(500).json( { message: 'Fatal error: Profile was not updated' } )
